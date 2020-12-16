@@ -4,11 +4,11 @@ const Manage = () => {
     return (
         <section className="manage">
             <div className="manag__top">
-                <div className="manage__filter"></div>
+                <div className="manage__filter">FILTER</div>
                 <label className="manage__search">
                     <input type="text" placeholder='Search users by name, id' />
                 </label>
-                <div className="manage__add-user"></div>
+                <button className="manage__add-user"></button>
             </div>
             <table className="manage__users"></table>
         </section>
