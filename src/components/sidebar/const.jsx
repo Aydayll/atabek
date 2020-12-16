@@ -1,23 +1,14 @@
-import React from 'react';
-import { navNames, navIcons } from './const';
+import dashboard from '../../assets/dashboard.svg';
+import users from '../../assets/user.svg';
+console.log(users);
 
-const Nav = () => {
-  return (
-    <nav className='sidebar__nav'>
-      <ul>
-        {navNames.map((item, index) => {
-          return (
-            <li className='sidebar__item'>
-              <a className='sidebar__link' href='#'>
-                <img src={navIcons[index]} alt='nav-icon' />
-                <span>{item}</span>
-              </a>
-            </li>
-          );
-        })}
-      </ul>
-    </nav>
-  );
-};
+export const navNames = [
+  'Dashboard',
+  'Users',
+  'Products',
+  'Authentication',
+  'Typography',
+  'Icons & Images',
+];
 
-export default Nav;
+export const navIcons = [dashboard, users, dashboard, users, dashboard, users];

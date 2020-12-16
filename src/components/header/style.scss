@@ -1,6 +1,6 @@
 @import "../global";
 .header{
-    padding: 20px;
+    padding: 14px 24px;
     font-family: sans-serif;
     background-color: $color-blue;
     &__row{
@@ -15,7 +15,7 @@
        align-items: center;
        color: $color-white;
        span{
-           
+           @include font(20px, 500, 1.2);
            margin-left: 8px;
            letter-spacing: -0.0555556px;
        }
