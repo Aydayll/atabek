@@ -1,0 +1,18 @@
+@import "../global";
+.sidebar{
+    max-width:270px ;
+    text-align: center;
+    &__top{
+        padding: 24px 16px;
+    }
+    &__name{
+    @include font();
+    margin: 16px 0 4px;
+    letter-spacing: -0.05px;
+    text-align: center;
+     color: $color-black;
+    }
+    &__position{
+        
+    }
+}

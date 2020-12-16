@@ -1,14 +1,6 @@
-@mixin font($style, $size, $weight) {
-	font-style: normal;
+@mixin font($size: 16px, $weight: 400, $line-height: 1, $style: normal) {
+	font-style: $style;
+	font-weight: $weight;
 	font-size: $size;
-    font-weight: $weight;
-    line-height: $line-height;
-
-}
-@mixin position($pos, $top: auto, $right: auto, $bottom: auto, $left: auto) {
-	position: $pos;
-	top: $top;
-	right: $right;
-	bottom: $bottom;
-	left: $left;
+	line-height: $line-height;
 }
