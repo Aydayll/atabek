@@ -1,6 +1,6 @@
 import React from 'react';
 import userImg from '../../assets/user.png';
-import  Nav from './nav';
+import Nav from './nav';
 import './style.scss';
 
 const Sidebar = () => {
@@ -8,12 +8,17 @@ const Sidebar = () => {
     <aside className="sidebar">
       <div className="sidebar__top">
         <img src={userImg} className="sidebar__avatar"></img>
-         <h3 className="sidebar__name">Roman Kutepov</h3>
-          <span className="sidebar__position">Brain Director
-          </span>
-          <hr/>
+        <h3 className="sidebar__name">Roman Kutepov</h3>
+        <span className="sidebar__position">Brain Director
+        </span>
+        <hr />
       </div>
-       <Nav />
+      <Nav />
+      <hr />
+      <div className="sidebar__support">
+        <span>Support</span>
+        <a href="#">Support</a>
+      </div>
     </aside>
   )
 }
