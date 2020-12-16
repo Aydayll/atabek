@@ -2,16 +2,15 @@
 
 .sidebar {
     position: absolute;
-    top: 0;
+    top: 64px;
     left: 0;
     max-width: 270px;
-    padding: 0 16px;
+    padding: 0 50px;
     z-index:1;
     background-color: $color-white;
     &__top {
         padding: 24px 16px 0;
     }
-
     hr {
         margin-top: 24px;
         background-color: $color-gray;
