@@ -3,7 +3,11 @@
     max-width:270px ;
     text-align: center;
     &__top{
-        padding: 24px 16px;
+        padding: 24px 16px 0;
+    }
+    hr{
+        margin-top: 24px;
+        background-color: $color-gray;
     }
     &__name{
     @include font();
@@ -13,6 +17,8 @@
      color: $color-black;
     }
     &__position{
-        
+        @include font(12px);
+        color: $color-gray;
+        text-align: center;
     }
 }
