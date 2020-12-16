@@ -1,14 +1,14 @@
-
+import React from 'react';
 import {navItems} from './const';
  
 function Items() {
    return(
-      <nav>
-          <ul>
+      <nav className = "nav">
+          <ul className = "nav__list">
           {navItems.map((item) =>(
-              <li key = {item}>
-                 <a href={item}>
-                    <img src={item} alt=""/>
+              <li className ="nav__item " key = {item}>
+                 <a className = "nav__link"  href={item}>
+                    <img src={item} alt= ""/>
                  </a>
               </li>
           ))}

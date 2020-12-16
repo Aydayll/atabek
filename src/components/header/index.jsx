@@ -1,24 +1,21 @@
 import React from 'react';
 import Items from './items';
-import logo from '../../assets/logo.svg';
+import Logo from './logo';
 import './style.scss';
 
 const Header = () => {
-    return(
-        <header className = "header">
-           <div className="container">
-               <div className="header__row">
-                   <div className="header__logo"><a href="">
-                       <img src={logo} alt=""/>
-                       <span>Devias</span>
-                       </a></div>
-                       <div className="header__nav">
-                          <Items />
-                          </div>
-               </div>
-           </div>
+    return (
+        <header className="header">
+            <div className="container">
+                <div className="header__row">
+                    <Logo />
+                    <div className="header__nav">
+                        <Items />
+                    </div>
+                </div>
+            </div>
         </header>
     );
 };
 
-export default Header ;
+export default Header;
