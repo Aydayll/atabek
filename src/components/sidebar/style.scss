@@ -1,9 +1,13 @@
 @import "../global";
 
 .sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
     max-width: 270px;
-    text-align: center;
-
+    padding: 0 16px;
+    z-index:1;
+    background-color: $color-white;
     &__top {
         padding: 24px 16px 0;
     }
