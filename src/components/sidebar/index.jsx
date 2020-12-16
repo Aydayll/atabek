@@ -1,6 +1,7 @@
 import React from 'react';
 import userImg from '../../assets/user.png';
 import Nav from './nav';
+import QuestionIcon from '../../assets/question-icon.svg';
 import './style.scss';
 
 const Sidebar = () => {
@@ -17,7 +18,9 @@ const Sidebar = () => {
       <hr />
       <div className="sidebar__support">
         <span>Support</span>
-        <a href="#">Support</a>
+        <a href="#"><img src={QuestionIcon} alt="support"/>
+         <span>Support</span>
+        </a>
       </div>
     </aside>
   )
