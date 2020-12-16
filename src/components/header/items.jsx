@@ -7,7 +7,9 @@ function Items() {
           <ul>
           {navItems.map((item) =>(
               <li key = {item}>
-                 <a href={item}></a>
+                 <a href={item}>
+                    <img src={item} alt=""/>
+                 </a>
               </li>
           ))}
           </ul>
