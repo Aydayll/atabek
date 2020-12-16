@@ -10,11 +10,11 @@ const Header = () => {
                <div className="header__row">
                    <div className="header__logo"><a href="">
                        <img src={logo} alt=""/>
+                       <span>Devias</span>
                        </a></div>
                        <div className="header__nav">
                           <Items />
                           </div>
-                       <div className="header__btn">szdfcgvh;bj</div>
                </div>
            </div>
         </header>
