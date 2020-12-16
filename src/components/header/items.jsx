@@ -1,4 +1,4 @@
-import React from 'react';
+
 import {navItems} from './const';
  
 function Items() {
@@ -7,7 +7,7 @@ function Items() {
           <ul>
           {navItems.map((item) =>(
               <li key = {item}>
-                 <a href={items}>{items}</a>
+                 <a href={item}></a>
               </li>
           ))}
           </ul>

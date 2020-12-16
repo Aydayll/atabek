@@ -1,15 +1,11 @@
+@import "../global";
 .header{
     padding: 20px;
+    background-color: $color-blue;
     &__row{
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
-    ul{
-        display: flex;
-        list-style: none;
-    li{
-        margin-left: 15px;
-    }
-}
+
 }
