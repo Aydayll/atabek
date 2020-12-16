@@ -1,4 +1,6 @@
 import React from 'react';
+import Items from './items';
+import logo from '../../assets/logo.svg';
 import './style.scss';
 
 const Header = () => {
@@ -6,7 +8,9 @@ const Header = () => {
         <header className = "header">
            <div className="container">
                <div className="header__row">
-                   <div className="header__logo">ryxutcfygv</div>
+                   <div className="header__logo"><a href="">
+                       <img src={logo} alt=""/>
+                       </a></div>
                        <div className="header__nav">
                           <Items />
                           </div>
