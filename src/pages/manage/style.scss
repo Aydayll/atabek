@@ -82,4 +82,27 @@
 			background-color: rgba(63, 63, 68, 0.15);
 		}
 	}
+
+.user {
+	&__name {
+		@include font(14px, 500);
+		letter-spacing: -0.05px;
+		color: $color-black;
+		margin-left: 12px;
+	}
+	&__row {
+		
+		display: flex;
+		align-items: center;
+	}
+	&__date {
+		color: $color-gray;
+	}
+	&__avatar {
+		width: 32px;
+		height: 32px;
+		border-radius: 50%;
+		object-fit: cover;
+	}
+}
 }
