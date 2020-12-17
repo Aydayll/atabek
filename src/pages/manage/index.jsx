@@ -1,5 +1,6 @@
 import React from 'react';
 import Plus from '../../assets/plus.svg'
+import Avatar from '../../assets/avatar.svg'
 import './style.scss';
 
 const Manage = () => {
@@ -17,15 +18,21 @@ const Manage = () => {
                     ADD USER
                 </button>
             </div>
-            <table className="manage__users" border= '1'>
-                <tr>
-                <th className = "col-2">Selected 2 users</th>
-                <th className = "col-2">User ID</th>
-                <th className = "col-2">Phone Number</th>
-                <th className = "col-2">Email Address</th>
-                <th className = "col-2">Account Created</th>
+            <table className="manage__users">
+                <tr className="manage__row">
+                <th className = "col-2 manage__headers">Selected 2 users</th>
+                <th className = "col-2 manage__headers">User ID</th>
+                <th className = "col-2 manage__headers">Phone Number</th>
+                <th className = "col-2 manage__headers">Email Address</th>
+                <th className = "col-2 manage__headers">Account Created</th>
                 </tr>
                 <tr>
+                    <td>
+                        <img src={Avatar} alt="Avatar"/>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                     <td></td>
                 </tr>
             </table>
