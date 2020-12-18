@@ -4,7 +4,7 @@ const Item = ({ users }) => {
   console.log(users);
   return (
     <React.Fragment>
-      {((item) => {
+      {users.map((item) => {
         return (
           <tr className='manage__row'>
             <td className='col-3 user__row'>

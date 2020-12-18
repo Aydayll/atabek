@@ -2,11 +2,23 @@ import React from 'react';
 import Plus from '../../assets/plus.svg'
 import './style.scss';
 import Item from './items';
-import axios from 'axios';
 
-const Manage = () => {
+const Manage = ({data}) => {
+    const [userData, setUsersData] = React.useState(data);
+    const handleClick = () =>{
+        console.log('data')
+    };
     return (
         <section className="manage">
+            <div className="modal">
+                <form>
+                    <input type="text" placeholder = 'Введите Имя Пользователя'/>
+                    <input type="text" placeholder = 'Введите картинку'/>
+                    <input type="text" placeholder = 'Введите айди'/>
+                    <input type="text" placeholder = 'Введите емаил'/>
+                    <input type="text" placeholder = 'Введите номер'/>
+                </form>
+            </div>
             <div className="manage__top">
                 <div className="row">
                 <div className="manage__filter">FILTER</div>
@@ -14,8 +26,8 @@ const Manage = () => {
                     <input type="text" placeholder='Search users by name, id' />
                 </label>
                 </div>
-                <button className="manage__add-user">
-                <img src={Plus} alt=""/>
+                <button onClick={handleClick}className="manage__add-user">
+                <img src={Plus} alt="plus"/>
                     ADD USER
                 </button>
             </div>
@@ -27,7 +39,7 @@ const Manage = () => {
                 <th className = "col-2 manage__headers">Email Address</th>
                 <th className = "col-2 manage__headers">Account Created</th>
                 </tr>
-                <Item />
+                <Item users={userData}/>
                 
             </table>
         </section>
