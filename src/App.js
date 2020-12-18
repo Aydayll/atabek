@@ -1,6 +1,5 @@
-
+import React from 'react';
 import Header from './components/header/';
-import Form from './components/form';
 import Sidebar from './components/sidebar';
 import Manage from './pages/manage';
 

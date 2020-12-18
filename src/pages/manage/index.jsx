@@ -2,6 +2,7 @@ import React from 'react';
 import Plus from '../../assets/plus.svg'
 import './style.scss';
 import Item from './items';
+import axios from 'axios';
 
 const Manage = () => {
     return (
