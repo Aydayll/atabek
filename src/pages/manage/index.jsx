@@ -4,12 +4,14 @@ import './style.scss';
 import Item from './items';
 
 const Manage = ({data}) => {
-    const [userData, setUsersData] = React.useState(data);
+    const [usersData, setUsersData] = React.useState(data);
+    const [activeModal, setActive] = React.useState(false);
     const handleClick = () =>{
-        console.log('data')
+        console.log(data)
     };
     return (
         <section className="manage">
+            {activeModal && (
             <div className="modal">
                 <form>
                     <input type="text" placeholder = 'Введите Имя Пользователя'/>
@@ -19,6 +21,7 @@ const Manage = ({data}) => {
                     <input type="text" placeholder = 'Введите номер'/>
                 </form>
             </div>
+            )}
             <div className="manage__top">
                 <div className="row">
                 <div className="manage__filter">FILTER</div>
@@ -39,7 +42,7 @@ const Manage = ({data}) => {
                 <th className = "col-2 manage__headers">Email Address</th>
                 <th className = "col-2 manage__headers">Account Created</th>
                 </tr>
-                <Item users={userData}/>
+                <Item users={data}/>
                 
             </table>
         </section>
