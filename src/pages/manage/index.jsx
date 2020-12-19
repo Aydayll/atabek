@@ -59,7 +59,7 @@ const Manage = () => {
                     <div>
                         <h3 className="modal__title">Create a new user</h3>
                         <h6 className="modal__suptitle">Add main information about user</h6>
-                        <form onSubmit={(event) => handleSubmit(event)}>
+                        <form className="modal__form"onSubmit={(event) => handleSubmit(event)}>
                             <input onChange={(event) => saveData(event)} value={newUser.fullName} type='text' placeholder='Введите Имя Пользователя' />
                             <input onChange={(event) => saveData(event)} value={newUser.avatar} type='text' placeholder='Введите путь к картинке' />
                             <input onChange={(event) => saveData(event)} value={newUser.userID} type='text' placeholder='Введите ID' />
