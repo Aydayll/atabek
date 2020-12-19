@@ -20,6 +20,31 @@ const Manage = () => {
     const handleClick = () => {
         setActiveModal(activeModal ? false : true);
     };
+    const saveData = (event) => {
+        setNewUser({
+            id: '',
+            avatar: event.target.form[1].value,
+            fullName: event.target.form[0].value,
+            userID: event.target.form[2].value,
+            email: event.target.form[4].value,
+            phone: event.target.form[3].value,
+            dateOfRegistry: '',
+        });
+    };
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        setUsersData([...usersData, newUser]);
+        setNewUser({
+          id: '',
+          avatar: '',
+          fullName: '',
+          userID: '',
+          email: '',
+          phone: '',
+          dateOfRegistry: '',
+        });
+      };
+    
 
     React.useEffect(async () => {
         await axios
@@ -30,14 +55,19 @@ const Manage = () => {
     return (
         <section className="manage">
             {activeModal && (
-                <div className="modal"> 
-                    <form>
-                        <input value={newUser.fullName} type="text" placeholder='Введите Имя Пользователя' />
-                        <input value={newUser.avatar} type="text" placeholder='Введите путь к картинке' />
-                        <input value={newUser.id} type="text" placeholder='Введите ID' />
-                        <input value={newUser.phone} type="text" placeholder='Введите номер телефона' />
-                        <input value={newUser.email} type="text" placeholder='Введите почту пользователя' />
-                    </form>
+                <div className="modal">
+                    <div>
+                        <h3 className="modal__title">Create a new user</h3>
+                        <h6 className="modal__suptitle">Add main information about user</h6>
+                        <form onSubmit={(event) => handleSubmit(event)}>
+                            <input onChange={(event) => saveData(event)} value={newUser.fullName} type='text' placeholder='Введите Имя Пользователя' />
+                            <input onChange={(event) => saveData(event)} value={newUser.avatar} type='text' placeholder='Введите путь к картинке' />
+                            <input onChange={(event) => saveData(event)} value={newUser.userID} type='text' placeholder='Введите ID' />
+                            <input onChange={(event) => saveData(event)} value={newUser.phone} type='text' placeholder='Введите номер телефона' />
+                            <input onChange={(event) => saveData(event)} value={newUser.email} type='text' placeholder='Введите почту пользователя' />
+                            <button>Добавить пользователя</button>
+                        </form>
+                    </div>
                 </div>
             )}
             <div className="manage__top">
