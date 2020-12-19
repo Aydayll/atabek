@@ -17,7 +17,8 @@ const Sidebar = () => {
       <hr />
       <div className="sidebar__support">
         <span>Support</span>
-        <a href="#"><img src={QuestionIcon} alt="support"/>
+        <a href="#">
+          <img src={QuestionIcon} alt="support"/>
          <span>Support</span>
         </a>
       </div>
