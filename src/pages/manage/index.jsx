@@ -2,6 +2,7 @@ import React from 'react';
 import Plus from '../../assets/plus.svg'
 import './style.scss';
 import Item from './items';
+import {BtnGoBack} from '../../components/btns/index';
 import axios from 'axios';
 
 const Manage = () => {
@@ -57,6 +58,7 @@ const Manage = () => {
             {activeModal && (
                 <div className="modal">
                     <div>
+                        <BtnGoBack />
                         <h3 className="modal__title">Create a new user</h3>
                         <h6 className="modal__suptitle">Add main information about user</h6>
                         <form className="modal__form"onSubmit={(event) => handleSubmit(event)}>
