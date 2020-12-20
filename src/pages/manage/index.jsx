@@ -58,7 +58,9 @@ const Manage = () => {
             {activeModal && (
                 <div className="modal">
                     <div className="col-6">
-                        <BtnGoBack />
+                       <div onClick={() =>setActiveModal(false)}>
+                       <BtnGoBack />
+                       </div>
                         <h3 className="modal__title">Create a new user</h3>
                         <h6 className="modal__suptitle">Add main information about user</h6>
                         <form className="modal__form"onSubmit={(event) => handleSubmit(event)}>
@@ -67,7 +69,7 @@ const Manage = () => {
                             <input onChange={(event) => saveData(event)} value={newUser.userID} type='text' placeholder='Введите ID' />
                             <input onChange={(event) => saveData(event)} value={newUser.phone} type='text' placeholder='Введите номер телефона' />
                             <input onChange={(event) => saveData(event)} value={newUser.email} type='text' placeholder='Введите почту пользователя' />
-                            <button>Добавить пользователя</button>
+                            <button className= "btn__blue form__btn">ADD NEW USER</button>
                         </form>
                     </div>
                     <div className="col-6">

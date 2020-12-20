@@ -1,17 +1,19 @@
 @import "../../index.scss";
 
-.manage{
-    background-color: #f2f2f2;
-    padding-left: 300px;
-    padding-top: 24px;
+.manage {
+	background-color: #f2f2f2;
+	padding-left: 300px;
+	padding-top: 24px;
 	padding-right: 30px;
 	min-height: 100vh;
-    &__top{
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 24px;
-    }
-    &__add-user {
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 24px;
+	}
+
+	&__add-user {
 		@include font(14px, 500);
 		display: flex;
 		align-items: center;
@@ -25,11 +27,13 @@
 		outline: none;
 		border: none;
 		cursor: pointer;
+
 		img {
 			margin-right: 14px;
 		}
-    }
-    &__filter {
+	}
+
+	&__filter {
 		@include font(14px, 500);
 		display: flex;
 		align-items: center;
@@ -38,11 +42,12 @@
 		box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
 		letter-spacing: 1.25px;
 		text-transform: uppercase;
-		color: $color-black ;
+		color: $color-black;
 		border-radius: 4px;
 		cursor: pointer;
 		margin-right: 16px;
 	}
+
 	&__search {
 		input {
 			padding: 10px 16px;
@@ -53,6 +58,7 @@
 			box-shadow: 0px 0px 0px #e4e7eb;
 		}
 	}
+
 	&__users {
 		width: 100%;
 		box-shadow: 0px 1px 0px rgba(63, 63, 68, 0.05), 0px 1px 3px rgba(63, 63, 68, 0.15);
@@ -60,18 +66,21 @@
 		background-color: $color-white;
 		border-spacing: 0;
 	}
+
 	&__headers {
 		@include font(14px);
 		letter-spacing: -0.05px;
 		color: $color-black;
 		text-align: left;
 	}
+
 	&__row {
 		position: relative;
 		display: flex;
 		align-items: center;
 		padding: 18px 33px 18px 27px;
 		width: 100%;
+
 		&::before {
 			content: "";
 			position: absolute;
@@ -83,30 +92,34 @@
 		}
 	}
 
-.user {
-	&__name {
-		@include font(14px, 500);
-		letter-spacing: -0.05px;
-		color: $color-black;
-		margin-left: 12px;
-	}
-	&__row {
-		
-		display: flex;
-		align-items: center;
-	}
-	&__date {
-		color: $color-gray;
-	}
-	&__avatar {
-		width: 32px;
-		height: 32px;
-		border-radius: 50%;
-		object-fit: cover;
+	.user {
+		&__name {
+			@include font(14px, 500);
+			letter-spacing: -0.05px;
+			color: $color-black;
+			margin-left: 12px;
+		}
+
+		&__row {
+
+			display: flex;
+			align-items: center;
+		}
+
+		&__date {
+			color: $color-gray;
+		}
+
+		&__avatar {
+			width: 32px;
+			height: 32px;
+			border-radius: 50%;
+			object-fit: cover;
+		}
 	}
 }
-}
-.modal{
+
+.modal {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -120,6 +133,7 @@
 	height: calc(100vh - 130px);
 	box-shadow: 0px 1px 0px rgba(63, 63, 68, 0.05), 0px 1px 3px rgba(63, 63, 68, 0.15);
 	padding: 55px 0 55px 64px;
+
 	&__title {
 		@include font(24px, 500);
 		margin-top: 24px;
@@ -127,21 +141,48 @@
 		letter-spacing: -0.06px;
 		color: $color-black;
 	}
+
 	&__suptitle {
 		@include font(14px, 500);
 		letter-spacing: -0.05px;
 		color: #9ea0a5;
 		margin-bottom: 40px;
 	}
+
 	&__form {
 		display: flex;
 		flex-direction: column;
+
 		input {
 			margin-bottom: 16px;
 			padding: 13px 16px;
 			border: 1px solid rgba(0, 0, 0, 0.32);
 			box-sizing: border-box;
 			border-radius: 4px;
+
+			&:focus {
+				outline-color: $color-blue;
+
+			}
+		}
+
+		button {
+			font-size: 16px;
+			padding: 12px 0;
+			text-align: center;
+			background: $color-blue;
+			color: $color-white;
+			border-radius: 4px;
+			letter-spacing: 1.25px;
+			cursor: pointer;
+			transition: 0.4s;
+			&:focus {
+				outline-color: $color-blue;
+
+			}
+			&:active {
+				transform: scale(0.9);
+			}
 		}
 	}
 }
