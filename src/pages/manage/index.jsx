@@ -57,7 +57,7 @@ const Manage = () => {
         <section className="manage">
             {activeModal && (
                 <div className="modal">
-                    <div>
+                    <div className="col-6">
                         <BtnGoBack />
                         <h3 className="modal__title">Create a new user</h3>
                         <h6 className="modal__suptitle">Add main information about user</h6>
@@ -69,6 +69,9 @@ const Manage = () => {
                             <input onChange={(event) => saveData(event)} value={newUser.email} type='text' placeholder='Введите почту пользователя' />
                             <button>Добавить пользователя</button>
                         </form>
+                    </div>
+                    <div className="col-6">
+                        Here is image
                     </div>
                 </div>
             )}
