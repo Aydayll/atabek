@@ -69,7 +69,7 @@ const Manage = () => {
                             <input onChange={(event) => saveData(event)} value={newUser.userID} type='text' placeholder='Введите ID' />
                             <input onChange={(event) => saveData(event)} value={newUser.phone} type='text' placeholder='Введите номер телефона' />
                             <input onChange={(event) => saveData(event)} value={newUser.email} type='text' placeholder='Введите почту пользователя' />
-                            <button className= "btn__blue form__btn">ADD NEW USER</button>
+                            <button className= "btn-blue form__btn ">ADD NEW USER</button>
                         </form>
                     </div>
                     <div className="col-6">

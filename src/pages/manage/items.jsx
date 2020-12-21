@@ -4,7 +4,7 @@ const Item = ({ users }) => {
   let now = new Date()
   return (
     <React.Fragment>
-      {users.map((item) => {
+      {users.map((item, index) => {
         let wasDate = new Date(`${item.dateOfRegistry}`)
         return (
           <tr className='manage__row'>
@@ -16,7 +16,7 @@ const Item = ({ users }) => {
             <td className='col-3 manage__headers'>{item.phone}</td>
             <td className='col-3 manage__headers'>{item.email}</td>
             <td className='col-1 manage__headers user__date'>
-              {users
+            {users[index].dateOfRegistry.length
               !==0 ? <Time value={wasDate} format="YYYY/MM/DD" />
               : <Time value={now} format="YYYY/MM/DD" /> }
         </td>
