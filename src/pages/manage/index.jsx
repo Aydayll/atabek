@@ -3,6 +3,7 @@ import Plus from '../../assets/plus.svg'
 import './style.scss';
 import Item from './items';
 import { BtnGoBack } from '../../components/btns/index';
+import modalRight from '../../assets/modal-right.png';
 import axios from 'axios';
 
 const Manage = () => {
@@ -21,11 +22,12 @@ const Manage = () => {
     const modaRef = React.useRef();
     const modalWrapperRef = React.useRef();
 
-    const handleClick = (event) => {
+    const handleClickOutside = (event) => {
         if (!event.path.includes(modaRef.current)) {
-            setActiveModal(false);
+          setActiveModal(false);
         }
-    };
+      };
+
     const saveData = (event) => {
         setNewUser({
             id: '',
@@ -66,7 +68,7 @@ const Manage = () => {
 
     const handleClick = () => {
         setActiveModal(true);
-    };
+      };
     return (
         <section className="manage">
             {activeModal && (
@@ -103,7 +105,7 @@ const Manage = () => {
                             </form>
                         </div>
                         <div className="col-6 text-right">
-                            Here is image
+                        <img className='modal__right' src={modalRight} alt='modalRight' />
                     </div>
                     </div>
                 </div>
