@@ -2,7 +2,7 @@ import React from 'react';
 import Plus from '../../assets/plus.svg'
 import './style.scss';
 import Item from './items';
-import {BtnGoBack} from '../../components/btns/index';
+import { BtnGoBack } from '../../components/btns/index';
 import axios from 'axios';
 
 const Manage = () => {
@@ -18,8 +18,13 @@ const Manage = () => {
     });
     const [activeModal, setActiveModal] = React.useState(false);
 
-    const handleClick = () => {
-        setActiveModal(activeModal ? false : true);
+    const modaRef = React.useRef();
+    const modalWrapperRef = React.useRef();
+
+    const handleClick = (event) => {
+        if (!event.path.includes(modaRef.current)) {
+            setActiveModal(false);
+        }
     };
     const saveData = (event) => {
         setNewUser({
@@ -36,16 +41,16 @@ const Manage = () => {
         event.preventDefault();
         setUsersData([...usersData, newUser]);
         setNewUser({
-          id: '',
-          avatar: '',
-          fullName: '',
-          userID: '',
-          email: '',
-          phone: '',
-          dateOfRegistry: '',
+            id: '',
+            avatar: '',
+            fullName: '',
+            userID: '',
+            email: '',
+            phone: '',
+            dateOfRegistry: '',
         });
-      };
-    
+    };
+
 
     React.useEffect(async () => {
         await axios
@@ -53,27 +58,53 @@ const Manage = () => {
             .then((response) => response)
             .then(({ data }) => setUsersData(data.users));
     }, []);
+    React.useEffect(() => {
+        if (modalWrapperRef.current) {
+            modalWrapperRef.current.addEventListener('click', handleClickOutside);
+        }
+    }, [activeModal]);
+
+    const handleClick = () => {
+        setActiveModal(true);
+    };
     return (
         <section className="manage">
             {activeModal && (
-                <div className="modal">
-                    <div className="col-6">
-                       <div onClick={() =>setActiveModal(false)}>
-                       <BtnGoBack />
-                       </div>
-                        <h3 className="modal__title">Create a new user</h3>
-                        <h6 className="modal__suptitle">Add main information about user</h6>
-                        <form className="modal__form"onSubmit={(event) => handleSubmit(event)}>
-                            <input onChange={(event) => saveData(event)} value={newUser.fullName} type='text' placeholder='Введите Имя Пользователя' />
-                            <input onChange={(event) => saveData(event)} value={newUser.avatar} type='text' placeholder='Введите путь к картинке' />
-                            <input onChange={(event) => saveData(event)} value={newUser.userID} type='text' placeholder='Введите ID' />
-                            <input onChange={(event) => saveData(event)} value={newUser.phone} type='text' placeholder='Введите номер телефона' />
-                            <input onChange={(event) => saveData(event)} value={newUser.email} type='text' placeholder='Введите почту пользователя' />
-                            <button className= "btn-blue form__btn ">ADD NEW USER</button>
-                        </form>
+                <div className="modal__wrapper">
+                    <div className="modal">
+                        <div className="col-6 modal__left">
+                            <div onClick={() => setActiveModal(false)}>
+                                <BtnGoBack />
+                            </div>
+                            <h3 className="modal__title">Create a new user</h3>
+                            <h6 className="modal__suptitle">Add main information about user</h6>
+                            <form className="modal__form" onSubmit={(event) => handleSubmit(event)}>
+                                <label className='modal__label' htmlFor=''>
+                                    <input required onChange={(event) => saveData(event)} value={newUser.fullName} type='text' placeholder='Введите Имя Пользователя' />
+                                    <p>Имя пользователя</p>
+                                </label>
+                                <label className='modal__label' htmlFor=''>
+                                    <input required onChange={(event) => saveData(event)} value={newUser.avatar} type='text' placeholder='Введите путь к картинке' />
+                                    <p>Картинка</p>
+                                </label>
+                                <label className='modal__label' htmlFor=''>
+                                    <input required onChange={(event) => saveData(event)} value={newUser.userID} type='text' placeholder='Введите ID' />
+                                    <p>ID</p>
+                                </label>
+                                <label className='modal__label' htmlFor=''>
+                                    <input required onChange={(event) => saveData(event)} value={newUser.phone} type='text' placeholder='Введите номер телефона' />
+                                    <p>Номер телефона</p>
+                                </label>
+                                <label className='modal__label' htmlFor=''>
+                                    <input onChange={(event) => saveData(event)} value={newUser.email} type='text' placeholder='Введите почту пользователя' />
+                                    <p>Почта пользователя</p>
+                                </label>
+                                <button className="btn-blue form__btn ">ADD NEW USER</button>
+                            </form>
+                        </div>
+                        <div className="col-6 text-right">
+                            Here is image
                     </div>
-                    <div className="col-6">
-                        Here is image
                     </div>
                 </div>
             )}
