@@ -4,6 +4,8 @@ import TableData from './tableData';
 import SearchBar from './searchBar';
 import './style.scss';
 import { PrimaryBtn } from '../../components/btns';
+import Modal from './modal';
+import './style.scss';
 
 export default function Manage() {
   const [usersData, setUsersData] = React.useState([]);
