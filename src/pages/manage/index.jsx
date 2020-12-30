@@ -3,6 +3,7 @@ import axios from 'axios';
 import TableData from './tableData';
 import SearchBar from './searchBar';
 import './style.scss';
+import { PrimaryBtn } from '../../components/btns';
 
 export default function Manage() {
   const [usersData, setUsersData] = React.useState([]);
@@ -21,9 +22,9 @@ export default function Manage() {
   }, []);
   return (
     <div className='manage'>
-
       <div className='manage__top'>
         <SearchBar setSearchValue={setSearchValue} style={{ borderRadius: '4px' }} />
+        <PrimaryBtn  text= {'Add user'}/>
       </div>
       <div style={{ height: 450, width: '100%', background: 'white', borderRadius: '4px' }}>
         <TableData
