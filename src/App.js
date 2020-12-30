@@ -4,7 +4,7 @@ import Header from './components/header/';
 import Sidebar from './components/sidebar';
 import Manage from './pages/manage/index';
 import Dashboard from './pages/dashboard';
-
+import Products from './pages/products';
 
 function App() {
   return (
@@ -13,6 +13,7 @@ function App() {
       <Sidebar />
       <Route exact path='/' component={Dashboard}/>
       <Route path='/users' component={Manage}/>
+      <Route path='/products' component={Products}/>
     </div>
   );
 }
