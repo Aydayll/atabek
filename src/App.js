@@ -11,7 +11,10 @@ function App() {
     <div className="App">
       <Header />
       <Sidebar />
-      <Route exact path='/' component={Dashboard}/>
+      <Route exact path='/' render={() => {
+        return <h1 className="section__container">Это часть проекта еще не готова, не спеши брат</h1>
+      }} />
+      <Route path='/dashboard' component={Dashboard}/>
       <Route path='/users' component={Manage}/>
       <Route path='/products' component={Products}/>
     </div>
