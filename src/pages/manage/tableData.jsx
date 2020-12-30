@@ -1,14 +1,9 @@
 import React from 'react';
 import { DataGrid } from '@material-ui/data-grid';
-import  {rows, columns} from './const';
-import './style.scss';
+import { columns } from './const';
 
-const TableData = ({users}) =>{
-    let now = new Date();
-    return(
-        <React.Fragment>
-            <DataGrid rows={rows} columns={columns} pageSize={5}checkboxSelection />
-        </React.Fragment>
-    )
-}
+const TableData = ({ users }) => {
+  return <DataGrid rows={users} columns={columns} pageSize={6} checkboxSelection />;
+};
+
 export default TableData;
