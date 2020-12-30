@@ -2,9 +2,6 @@ import React from 'react';
 import { BtnGoBack } from '../../components/btns/index';
 import modalRight from '../../assets/modal-right.png';
 
-
-
-
 const Modal = ({ setActiveModal, activeModal, setProducts, products }) => {
   const [newProduct, setNewProduct] = React.useState({
     id: '',
