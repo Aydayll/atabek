@@ -52,6 +52,60 @@
             "email": "rsnyder@blogspan.gov",
             "phone": "1-(618)312-3065",
             "dateOfRegistry": "04/08/2018"
+        },
+        {
+            "id": 6,
+            "avatar": "https://www.flaticon.com/premium-icon/icons/svg/924/924915.svg",
+            "fullName": "Айдай Макенова",
+            "userID": "DEV63016762",
+            "email": "rsnyder@blogspan.gov",
+            "phone": "1-(618)312-3065",
+            "dateOfRegistry": "04/28/2018"
+        },
+        {
+            "id": 7,
+            "avatar": "https://www.flaticon.com/premium-icon/icons/svg/706/706807.svg",
+            "fullName": "Жаннат Молдалиева",
+            "userID": "DEV63016762",
+            "email": "rsnyder@blogspan.gov",
+            "phone": "1-(618)312-3065",
+            "dateOfRegistry": "04/25/2018"
+        },
+        {
+            "id": 8,
+            "avatar": "https://www.flaticon.com/svg/static/icons/svg/949/949635.svg",
+            "fullName": "Астра Турдукулова",
+            "userID": "DEV63016762",
+            "email": "rsnyder@blogspan.gov",
+            "phone": "1-(618)312-3065",
+            "dateOfRegistry": "04/21/2018"
+        },
+        {
+            "id": 9,
+            "avatar": "https://www.flaticon.com/svg/static/icons/svg/3667/3667325.svg",
+            "fullName": "Айдана Молдалиева",
+            "userID": "DEV63016762",
+            "email": "rsnyder@blogspan.gov",
+            "phone": "1-(618)312-3065",
+            "dateOfRegistry": "04/19/2018"
+        },
+        {
+            "id": 10,
+            "avatar": "https://www.flaticon.com/premium-icon/icons/svg/2667/2667378.svg",
+            "fullName": "Кутманалиев Соя",
+            "userID": "DEV63016762",
+            "email": "rsnyder@blogspan.gov",
+            "phone": "1-(618)312-3065",
+            "dateOfRegistry": "04/11/2018"
+        },
+        {
+            "id": 11,
+            "avatar": "https://www.flaticon.com/premium-icon/icons/svg/2202/2202112.svg",
+            "fullName": "Макенов Жениш",
+            "userID": "DEV63016762",
+            "email": "rsnyder@blogspan.gov",
+            "phone": "1-(618)312-3065",
+            "dateOfRegistry": "04/08/2018"
         }
         
     ]
