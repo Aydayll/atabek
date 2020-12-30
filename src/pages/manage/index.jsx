@@ -2,7 +2,6 @@ import React from 'react';
 import axios from 'axios';
 import TableData from './tableData';
 import SearchBar from './searchBar';
-import './style.scss';
 import { PrimaryBtn } from '../../components/btns';
 import Modal from './modal';
 import './style.scss';
@@ -24,9 +23,18 @@ export default function Manage() {
   }, []);
   return (
     <div className='manage'>
+      {activeModal && (
+        <Modal
+          usersData={usersData}
+          activeModal={activeModal}
+          setActiveModal={setActiveModal}
+          setUsersData={setUsersData}
+        />
+      )}
+
       <div className='manage__top'>
         <SearchBar setSearchValue={setSearchValue} style={{ borderRadius: '4px' }} />
-        <PrimaryBtn  text= {'Add user'}/>
+        <PrimaryBtn handleClickModal={handleClickModal} text={'Add user'} />
       </div>
       <div style={{ height: 450, width: '100%', background: 'white', borderRadius: '4px' }}>
         <TableData

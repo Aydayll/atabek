@@ -52,4 +52,4 @@ export const BtnGoBack = () => {
   );
 };
 
-export const btn = () => {}
+export const btn = () => {};
