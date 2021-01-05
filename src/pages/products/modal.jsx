@@ -1,9 +1,6 @@
 import React from 'react';
 import { BtnGoBack } from '../../components/btns/index';
 import modalRight from '../../assets/modal-right.png';
-import distanseInWordsToNow from 'date-fns/distance_in_words_to_now';
-import ruLocale from 'date-fns/locale/ru';
-import enLocale from 'date-fns/locale/en';
 
 const Modal = ({ setActiveModal, activeModal, setProducts, products }) => {
   const [newProduct, setNewProduct] = React.useState({
@@ -40,12 +37,12 @@ const Modal = ({ setActiveModal, activeModal, setProducts, products }) => {
     event.preventDefault();
     setProducts([...products, newProduct]);
     setNewProduct({
-    id: '',
-    productLogo: '',
-    productName: '',
-    productDescription: '',
-    updatedTime: '',
-    downloads: '',
+      id: '',
+      productLogo: '',
+      productName: '',
+      productDescription: '',
+      updatedTime: '',
+      downloads: '',
     });
   };
 

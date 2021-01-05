@@ -21,7 +21,9 @@ const ProductItem = ({ item }) => {
                 <div className='products__footer row'>
                     <div>
                         <img src={timeIcon} alt='time icon' />
-                        <span>Updated {distanseInWordsToNow(item.updatedTime, { addSuffix: true, locale: enLocale, includeSeconds: true })}</span>
+                        <span>Updated {distanseInWordsToNow(item.updatedTime,
+                            { addSuffix: true, locale: enLocale, includeSeconds: true }
+                        )}</span>
                     </div>
                     <div>
                         <a href="https://slack.com/ssb/download-win">
