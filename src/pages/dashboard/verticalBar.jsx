@@ -1,60 +1,57 @@
-import React from 'react'
-import { Bar } from '@reactchartjs/react-chart.js'
+import React from 'react';
+import { Bar } from '@reactchartjs/react-chart.js';
+import { chartData } from './const';
+import DaysPopUp from './daysPopUp';
+const VerticalBar = () => {
+  const [arrayOfData, setArrayOfData] = React.useState(chartData[0]);
 
-const data = {
-  labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-  datasets: [
-    {
-      label: '# of Votes',
-      data: [12, 19, 3, 5, 2, 3],
-      backgroundColor: [
-        'rgba(255, 99, 132, 0.2)',
-        'rgba(54, 162, 235, 0.2)',
-        'rgba(255, 206, 86, 0.2)',
-        'rgba(75, 192, 192, 0.2)',
-        'rgba(153, 102, 255, 0.2)',
-        'rgba(255, 159, 64, 0.2)',
-      ],
-      borderColor: [
-        'rgba(255, 99, 132, 1)',
-        'rgba(54, 162, 235, 1)',
-        'rgba(255, 206, 86, 1)',
-        'rgba(75, 192, 192, 1)',
-        'rgba(153, 102, 255, 1)',
-        'rgba(255, 159, 64, 1)',
-      ],
-      borderWidth: 1,
-    },
-  ],
-}
-
-const options = {
-  scales: {
-    yAxes: [
+  const data = {
+    labels: ['1 Aug', '2 Aug', '3 Aug', '4 Aug', '5 Aug', '6 Aug', '7 Aug'],
+    datasets: [
       {
-        ticks: {
-          beginAtZero: true,
-        },
+        barThickness: 25,
+        maxBarThickness: 100,
+        minBarLength: 10,
+        label: ' ',
+        data: arrayOfData,
+        backgroundColor: '#1665D8',
+      },
+      {
+        barThickness: 25,
+        maxBarThickness: 100,
+        minBarLength: 10,
+        label: '',
+        data: [15, 25, 20, 5, 10, 4, 10],
+        backgroundColor: '#EDF0F2',
       },
     ],
-  },
-}
+  };
 
-const VerticalBar = () => (
-  <>
-    <div className='header'>
-      <h1 className='title'>Vertical Bar Chart</h1>
-      <div className='links'>
-        <a
-          className='btn btn-gh'
-          href='https://github.com/reactchartjs/react-chartjs-2/blob/react16/example/src/charts/VerticalBar.js'
-        >
-          Github Source
-        </a>
+  const options = {
+    scales: {
+      yAxes: [
+        {
+          ticks: {
+            beginAtZero: true,
+          },
+        },
+      ],
+    },
+  };
+  return (
+    <>
+      <div className='column__row'>
+        <h3 className='column__title'>Users by device</h3>
+        <DaysPopUp setArrayOfData={setArrayOfData} chartData={chartData} />
       </div>
-    </div>
-    <Bar data={data} options={options} />
-  </>
-)
-
+      <Bar
+        data={data}
+        options={options}
+        width={50}
+        height={20}
+        options={{ maintainAspectRatio: false }}
+      />
+    </>
+  );
+};
 export default VerticalBar;
