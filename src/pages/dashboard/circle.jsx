@@ -1,6 +1,6 @@
 import React from 'react';
 import { PieChart } from 'react-minimal-pie-chart';
-import daysPopUp from './daysPopUp';
+import DaysPopUp from './daysPopUp';
 
 const CircleChart = () => {
   const testObject = [
@@ -84,7 +84,7 @@ const CircleChart = () => {
         </div>
       </div>
       <div className='circle__footer'>
-        <daysPopUp setPercent={setPercent} testObject={testObject} />
+        <DaysPopUp setPercent={setPercent} testObject={testObject} />
         <a href=''>Audience Devices</a>
       </div>
     </>

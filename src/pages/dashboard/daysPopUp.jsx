@@ -32,9 +32,8 @@ const DaysPopUp = ({ setArrayOfData, chartData, setPercent, testObject }) => {
     <div
       ref={popUpRef}
       onClick={handleClickActive}
-      className={`column__filter circle__percent ${
-        list ? 'column__filter--up' : 'column__filter--down'
-      }`}>
+      className={`column__filter circle__percent ${list ? 'column__filter--up' : 'column__filter--down'
+        }`}>
       <span>{days[listItem]} ago</span>
       {list && (
         <ul className='circle__list'>
