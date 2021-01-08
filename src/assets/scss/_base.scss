@@ -85,3 +85,18 @@ img{
 		width: 101%;
 	}
 }
+.d-flex-between {
+	display: flex;
+	justify-content: space-between;
+}
+
+.blue {
+	color: $color-blue;
+}
+.red {
+	color: $color-red;
+}
+
+.yellow {
+	color: $color-yellow;
+}
