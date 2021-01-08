@@ -8,8 +8,15 @@ const Dashboard = () => {
     <section>
       <div className='section__container'>
         <TopCards />
-        <VerticalBar />
-        <Circle />
+        <div className="row">
+          <div className="col-9">
+          <VerticalBar />
+          </div>
+          <div className="col-3">
+          <Circle />
+          </div>
+        
+        </div>
       </div>
     </section>
   );

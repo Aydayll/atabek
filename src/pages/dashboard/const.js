@@ -1,5 +1,4 @@
-  
-export const cardsData = [
+  export const cardsData = [
   {
     suptitle: 'BUDGET',
     title: '$24,000',
