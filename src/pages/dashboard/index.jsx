@@ -1,5 +1,5 @@
 import React from 'react';
-import TopCards from './topCards';
+import Cards from './topCards';
 import VerticalBar from './verticalBar';
 import CircleChart from './circle'
 import './style.scss';
@@ -7,7 +7,7 @@ const Dashboard = () => {
   return (
     <section className='dashboard'>
       <div className='section__container'>
-        <TopCards />
+        <Cards />
         <div className="row">
           <div className="col-9">
             <div className="dashboard__item">
