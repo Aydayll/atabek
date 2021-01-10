@@ -44,9 +44,12 @@ img{
 	text-align: right;
 }
 .section__container {
+	background-color: $color-white;
 	padding-left: 300px;
 	padding-right: 30px;
-	padding-top: 24px;
+	padding-top: 88px;
+	min-height: 100vh
+	
 }
 .btn-blue {
 	@include font(14px, 500);

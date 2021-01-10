@@ -23,6 +23,7 @@ export default function Manage() {
   }, []);
   return (
     <div className='manage'>
+      <div className="section__container">
       {activeModal && (
         <Modal
           usersData={usersData}
@@ -47,6 +48,7 @@ export default function Manage() {
           })}
         />
       </div>
+    </div>
     </div>
   );
 }

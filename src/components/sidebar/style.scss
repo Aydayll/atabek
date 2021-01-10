@@ -1,7 +1,7 @@
 @import "../global";
 
 .sidebar {
-    position: absolute;
+    position: fixed;
     top: 64px;
     left: 0;
     max-width: 270px;
